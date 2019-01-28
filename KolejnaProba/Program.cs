@@ -20,7 +20,7 @@ namespace KolejnaProba
     {
         public override void Dzialanie()
         {
-            Console.WriteLine($"Sum:{ First + Second}");
+            Console.WriteLine($"wynik dodawania: { First + Second}");
             Console.ReadKey();
 
         }
@@ -29,7 +29,7 @@ namespace KolejnaProba
     {
         public override void Dzialanie()
         {
-            Console.WriteLine($"Min:{ First - Second}");
+            Console.WriteLine($"wynik odejmowania: { First - Second}");
             Console.ReadKey();
 
         }
@@ -38,7 +38,7 @@ namespace KolejnaProba
     {
         public override void Dzialanie()
         {
-            Console.WriteLine($"mnoz{ First * Second}");
+            Console.WriteLine($"wynik mnozenia { First * Second}");
             Console.ReadKey();
 
         }
@@ -47,7 +47,7 @@ namespace KolejnaProba
     {
         public override void Dzialanie()
         {
-            Console.WriteLine($"dziel:{ (float)First / Second}");
+            Console.WriteLine($"wynik dzielenia: { (float)First / Second}");
             Console.ReadKey();
         }
     }
@@ -115,14 +115,15 @@ namespace KolejnaProba
                 string wybor = Console.ReadLine();
                 wyb = Convert.ToInt32(wybor);
 
-                if (wyb <= 0 && wyb >= 4)
+                if (wyb > 0 && wyb <= 4)
                 {
-                    Console.WriteLine("wybrano zla liczbe, prosze wybrac liczbe od 1-4: ");
-                    Wybierz();
+                    end = "end";
+
                 }
                 else
                 {
-                    end = "end";
+                    Console.WriteLine("wybrano zla liczbe, prosze wybrac liczbe od 1-4: ");
+
                 }
             } while (end != "end");
             return wyb;
